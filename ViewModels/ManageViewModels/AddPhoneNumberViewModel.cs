@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AutoLogistic.Models.ViewModels.ManageViewModels
+namespace AutoLogistic.ViewModels.ManageViewModels
 {
     public class AddPhoneNumberViewModel
     {

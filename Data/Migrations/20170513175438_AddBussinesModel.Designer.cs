@@ -8,7 +8,7 @@ using AutoLogistic.Data;
 namespace AutoLogistic.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170513084611_AddBussinesModel")]
+    [Migration("20170513175438_AddBussinesModel")]
     partial class AddBussinesModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -77,7 +77,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -87,7 +87,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.HasKey("CarrierId");
 
@@ -103,7 +103,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -113,7 +113,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.HasKey("CityId");
 
@@ -129,7 +129,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -139,7 +139,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.HasKey("CrTypeId");
 
@@ -153,7 +153,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -163,7 +163,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.Property<string>("Name");
 
@@ -181,7 +181,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<bool>("IsDelete");
 
@@ -189,7 +189,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.Property<string>("Name");
 
@@ -209,7 +209,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -219,7 +219,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.HasKey("ItemColorId");
 
@@ -233,7 +233,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -245,7 +245,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.HasKey("ItemModelId");
 
@@ -259,7 +259,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -269,7 +269,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.Property<string>("Type");
 
@@ -287,7 +287,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -297,7 +297,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.HasKey("PickupAreaId");
 
@@ -311,7 +311,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -321,7 +321,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.Property<string>("RackNumber");
 
@@ -337,7 +337,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -347,7 +347,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.Property<string>("PoliceRegNumber");
 
@@ -367,7 +367,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -377,7 +377,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.Property<string>("TruckerName");
 
@@ -393,7 +393,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<string>("Descriptions");
 
@@ -403,7 +403,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.Property<string>("WellbaseNumber");
 
@@ -433,7 +433,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CustomerSentTime");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<Guid>("DriverId");
 
@@ -447,7 +447,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.Property<string>("Note");
 
@@ -493,7 +493,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int?>("DaysInTheShip");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<Guid>("DestinationId");
 
@@ -521,7 +521,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.Property<int>("MonthOfLoading");
 
@@ -589,7 +589,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<DateTime>("DeleteDate");
+                    b.Property<DateTime?>("DeleteDate");
 
                     b.Property<DateTime>("EstimateTimeArrival");
 
@@ -603,7 +603,7 @@ namespace AutoLogistic.Data.Migrations
 
                     b.Property<int>("ModifyCount");
 
-                    b.Property<DateTime>("ModifyDate");
+                    b.Property<DateTime?>("ModifyDate");
 
                     b.Property<Guid>("RackPoleId");
 

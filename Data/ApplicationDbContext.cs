@@ -19,8 +19,6 @@ namespace AutoLogistic.Data
             base.OnModelCreating(builder);
             builder.HasPostgresExtension("uuid-ossp");
 
-            //builder.Entity<Carrier>().Property(e => e.CarrierId).HasDefaultValueSql("uuid_generate_v4()");
-
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);

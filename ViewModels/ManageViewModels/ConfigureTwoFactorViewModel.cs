@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace AutoLogistic.Models.ViewModels.ManageViewModels
+namespace AutoLogistic.ViewModels.ManageViewModels
 {
     public class ConfigureTwoFactorViewModel
     {

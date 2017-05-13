@@ -41,12 +41,12 @@ namespace AutoLogistic.Data.Migrations
                     CarrierId = table.Column<Guid>(nullable: false),
                     CarrierName = table.Column<string>(nullable: true),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false)
+                    ModifyDate = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -60,12 +60,12 @@ namespace AutoLogistic.Data.Migrations
                     CityId = table.Column<Guid>(nullable: false),
                     CityName = table.Column<string>(nullable: true),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false)
+                    ModifyDate = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -79,12 +79,12 @@ namespace AutoLogistic.Data.Migrations
                     CrTypeId = table.Column<Guid>(nullable: false),
                     CrName = table.Column<string>(nullable: true),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false)
+                    ModifyDate = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -97,12 +97,12 @@ namespace AutoLogistic.Data.Migrations
                 {
                     CustomerId = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -117,11 +117,11 @@ namespace AutoLogistic.Data.Migrations
                     DriverId = table.Column<Guid>(nullable: false),
                     Address = table.Column<string>(nullable: true),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     PhoneNumber = table.Column<string>(nullable: true)
                 },
@@ -137,12 +137,12 @@ namespace AutoLogistic.Data.Migrations
                     ItemColorId = table.Column<Guid>(nullable: false),
                     Color = table.Column<string>(nullable: true),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false)
+                    ModifyDate = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -155,13 +155,13 @@ namespace AutoLogistic.Data.Migrations
                 {
                     ItemModelId = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     Model = table.Column<string>(nullable: true),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false)
+                    ModifyDate = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -174,12 +174,12 @@ namespace AutoLogistic.Data.Migrations
                 {
                     ItemTypeId = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: true),
                     Type = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -194,12 +194,12 @@ namespace AutoLogistic.Data.Migrations
                     PickupAreaId = table.Column<Guid>(nullable: false),
                     AreaName = table.Column<string>(nullable: true),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false)
+                    ModifyDate = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -212,12 +212,12 @@ namespace AutoLogistic.Data.Migrations
                 {
                     RackId = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: true),
                     RackNumber = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -231,12 +231,12 @@ namespace AutoLogistic.Data.Migrations
                 {
                     TruckerId = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: true),
                     TruckerName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -250,12 +250,12 @@ namespace AutoLogistic.Data.Migrations
                 {
                     WellbaseId = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: true),
                     WellbaseNumber = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -269,12 +269,12 @@ namespace AutoLogistic.Data.Migrations
                 {
                     TruckId = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     Descriptions = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: true),
                     PoliceRegNumber = table.Column<string>(nullable: true),
                     TruckerId = table.Column<Guid>(nullable: false)
                 },
@@ -304,7 +304,7 @@ namespace AutoLogistic.Data.Migrations
                     DaysDoorToDoor = table.Column<int>(nullable: true),
                     DaysInStorage = table.Column<int>(nullable: false),
                     DaysInTheShip = table.Column<int>(nullable: true),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     DestinationId = table.Column<Guid>(nullable: false),
                     DispatchNoteNumber = table.Column<string>(nullable: true),
                     DriverId = table.Column<Guid>(nullable: true),
@@ -318,7 +318,7 @@ namespace AutoLogistic.Data.Migrations
                     ItemTypeId = table.Column<Guid>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: true),
                     MonthOfLoading = table.Column<int>(nullable: false),
                     MonthOfReceiving = table.Column<int>(nullable: false),
                     OriginId = table.Column<Guid>(nullable: false),
@@ -413,14 +413,14 @@ namespace AutoLogistic.Data.Migrations
                     ContainerClosingTime = table.Column<DateTime>(nullable: false),
                     ContainerCode = table.Column<string>(nullable: true),
                     CreateDate = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     EstimateTimeArrival = table.Column<DateTime>(nullable: false),
                     EstimateTimeDeparture = table.Column<DateTime>(nullable: false),
                     InvoiceNumber = table.Column<string>(nullable: true),
                     IsDelete = table.Column<bool>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: true),
                     RackPoleId = table.Column<Guid>(nullable: false),
                     ReceiverId = table.Column<Guid>(nullable: false),
                     ReceivingId = table.Column<Guid>(nullable: false),
@@ -489,14 +489,14 @@ namespace AutoLogistic.Data.Migrations
                     CustomerReceiverName = table.Column<string>(nullable: true),
                     CustomerSentDate = table.Column<DateTime>(nullable: false),
                     CustomerSentTime = table.Column<DateTime>(nullable: false),
-                    DeleteDate = table.Column<DateTime>(nullable: false),
+                    DeleteDate = table.Column<DateTime>(nullable: true),
                     DriverId = table.Column<Guid>(nullable: false),
                     Incident = table.Column<bool>(nullable: false),
                     IsDelete = table.Column<bool>(nullable: false),
                     KmArrival = table.Column<int>(nullable: false),
                     ModifyBy = table.Column<string>(nullable: true),
                     ModifyCount = table.Column<int>(nullable: false),
-                    ModifyDate = table.Column<DateTime>(nullable: false),
+                    ModifyDate = table.Column<DateTime>(nullable: true),
                     Note = table.Column<string>(nullable: true),
                     ShipDockingDate = table.Column<DateTime>(nullable: false),
                     ShippingId = table.Column<Guid>(nullable: false),

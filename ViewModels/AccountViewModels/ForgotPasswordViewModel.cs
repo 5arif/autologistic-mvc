@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AutoLogistic.Models.ViewModels.AccountViewModels
+namespace AutoLogistic.ViewModels.AccountViewModels
 {
     public class ForgotPasswordViewModel
     {

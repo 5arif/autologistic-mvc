@@ -7,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using AutoLogistic.Data;
 using AutoLogistic.Models;
-using AutoLogistic.Services;
 using AutoLogistic.Config;
 using WebMarkupMin.AspNetCore1;
 
@@ -24,7 +23,6 @@ namespace AutoLogistic
 
             if (env.IsDevelopment())
             {
-                // For more details on using the user secret store see https://go.microsoft.com/fwlink/?LinkID=532709
                 builder.AddUserSecrets<Startup>();
             }
 
@@ -34,10 +32,8 @@ namespace AutoLogistic
 
         public IConfigurationRoot Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -46,14 +42,9 @@ namespace AutoLogistic
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
-
-            // Add application services.
             WebMarkupConfig.Register(services);
-            services.AddTransient<IEmailSender, AuthMessageSender>();
-            services.AddTransient<ISmsSender, AuthMessageSender>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
@@ -73,8 +64,6 @@ namespace AutoLogistic
             app.UseStaticFiles();
             app.UseWebMarkupMin();
             app.UseIdentity();
-
-            // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
 
             app.UseMvc(routes =>
             {
