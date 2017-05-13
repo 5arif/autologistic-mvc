@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +8,8 @@ using Microsoft.Extensions.Logging;
 using AutoLogistic.Data;
 using AutoLogistic.Models;
 using AutoLogistic.Services;
+using AutoLogistic.Config;
+using WebMarkupMin.AspNetCore1;
 
 namespace AutoLogistic
 {
@@ -50,6 +48,7 @@ namespace AutoLogistic
             services.AddMvc();
 
             // Add application services.
+            WebMarkupConfig.Register(services);
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
         }
@@ -72,7 +71,7 @@ namespace AutoLogistic
             }
 
             app.UseStaticFiles();
-
+            app.UseWebMarkupMin();
             app.UseIdentity();
 
             // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
