@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Miminium Admin Template v.1">
+    <meta name="author" content="Isna Nur Azis">
+    <meta name="keyword" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AutoLogistic</title>
+
+    <!-- start: Css -->
+    <link href="~/css/libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/css/libs/animate.css" rel="stylesheet" />
+    <link href="~/css/app/style-based.css" rel="stylesheet" />
+    <link href="~/css/app/site.css" rel="stylesheet" />
+
+</head>
+
+<body id="mimin" class="dashboard">
+    <!-- start: Header -->
+    <nav class="navbar navbar-default header navbar-fixed-top">
+        <div class="col-md-12 nav-wrapper">
+            <div class="navbar-header" style="width:100%;">
+                <div class="opener-left-menu is-open">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </div>
+                <a href="~/Dashboard" class="navbar-brand">
+                    <b>AutoLogistic</b>
+                </a>
+
+                <ul class="nav navbar-nav navbar-right user-nav">
+                    <li class="user-name"><span>Administrator</span></li>
+                    <li class="dropdown avatar-dropdown" style="margin-right:10px">
+                        <img src="~/images/avatar-default.png" class="img-circle avatar" alt="user name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" />
+                        <ul class="dropdown-menu user-dropdown">
+                            <li><a href="#"><span class="fa fa-user"></span> My Profile</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="more">
+                                <ul>
+                                    <li><a href=""><span class="fa fa-cogs"></span></a></li>
+                                    <li><a href=""><span class="fa fa-lock"></span></a></li>
+                                    <li><a href="/"><span class="fa fa-power-off"></span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end: Header -->
+
+    <div class="container-fluid mimin-wrapper">
+        @Html.Partial("_RightMenuPartial")
+        <!-- start: Content -->
+        <div id="content">
+             @RenderBody()
+        </div>
+        <!-- end: content -->
+
+    </div>
+
+    <!-- end: Content -->
+    <!-- start: Javascript -->
+    <script src="~/js/libs/jquery/jquery.js"></script>
+    <script src="~/js/libs/jquery/jquery.nicescroll.min.js"></script>
+    <script src="~/js/libs/bootstrap/bootstrap.js"></script>
+    <script src="~/js/libs/moment.min.js"></script>
+    <script src="~/js/libs/main.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "autocore_web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sarif Hidayat",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "requirejs": "^2.3.3"
+  }
+}

@@ -16,27 +16,27 @@ namespace AutoLogistic.Controllers
     [Authorize]
     public class ManageController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly UserManager<ApplicationUser>   _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly string _externalCookieScheme;
-        private readonly IEmailSender _emailSender;
-        private readonly ISmsSender _smsSender;
-        private readonly ILogger _logger;
 
-        public ManageController(
-          UserManager<ApplicationUser> userManager,
-          SignInManager<ApplicationUser> signInManager,
-          IOptions<IdentityCookieOptions> identityCookieOptions,
-          IEmailSender emailSender,
-          ISmsSender smsSender,
-          ILoggerFactory loggerFactory)
+        private readonly IEmailSender _emailSender;
+        private readonly ILogger      _logger;
+        private readonly ISmsSender   _smsSender;
+        private readonly string       _externalCookieScheme;
+
+        public ManageController(UserManager<ApplicationUser> userManager,
+                                SignInManager<ApplicationUser> signInManager,
+                                IOptions<IdentityCookieOptions> identityCookieOptions,
+                                IEmailSender emailSender,
+                                ISmsSender smsSender,
+                                ILoggerFactory loggerFactory)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
+            _emailSender          = emailSender;
             _externalCookieScheme = identityCookieOptions.Value.ExternalCookieAuthenticationScheme;
-            _emailSender = emailSender;
-            _smsSender = smsSender;
-            _logger = loggerFactory.CreateLogger<ManageController>();
+            _logger               = loggerFactory.CreateLogger<ManageController>();
+            _signInManager        = signInManager;
+            _smsSender            = smsSender;
+            _userManager          = userManager;
         }
 
         //
@@ -60,10 +60,10 @@ namespace AutoLogistic.Controllers
             }
             var model = new IndexViewModel
             {
-                HasPassword = await _userManager.HasPasswordAsync(user),
-                PhoneNumber = await _userManager.GetPhoneNumberAsync(user),
-                TwoFactor = await _userManager.GetTwoFactorEnabledAsync(user),
-                Logins = await _userManager.GetLoginsAsync(user),
+                HasPassword       = await _userManager.HasPasswordAsync(user),
+                PhoneNumber       = await _userManager.GetPhoneNumberAsync(user),
+                TwoFactor         = await _userManager.GetTwoFactorEnabledAsync(user),
+                Logins            = await _userManager.GetLoginsAsync(user),
                 BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user)
             };
             return View(model);
@@ -341,8 +341,6 @@ namespace AutoLogistic.Controllers
             return RedirectToAction(nameof(ManageLogins), new { Message = message });
         }
 
-        #region Helpers
-
         private void AddErrors(IdentityResult result)
         {
             foreach (var error in result.Errors)
@@ -368,6 +366,5 @@ namespace AutoLogistic.Controllers
             return _userManager.GetUserAsync(HttpContext.User);
         }
 
-        #endregion
     }
 }

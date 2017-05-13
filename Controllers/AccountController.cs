@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -18,27 +16,27 @@ namespace AutoLogistic.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly IEmailSender _emailSender;
-        private readonly ISmsSender _smsSender;
-        private readonly ILogger _logger;
-        private readonly string _externalCookieScheme;
+        private readonly UserManager<ApplicationUser>   _userManager;
 
-        public AccountController(
-            UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager,
-            IOptions<IdentityCookieOptions> identityCookieOptions,
-            IEmailSender emailSender,
-            ISmsSender smsSender,
-            ILoggerFactory loggerFactory)
+        private readonly IEmailSender _emailSender;
+        private readonly ILogger      _logger;
+        private readonly ISmsSender   _smsSender;
+        private readonly string       _externalCookieScheme;
+
+        public AccountController(UserManager<ApplicationUser> userManager,
+                                SignInManager<ApplicationUser> signInManager,
+                                IOptions<IdentityCookieOptions> identityCookieOptions,
+                                IEmailSender emailSender,
+                                ISmsSender smsSender,
+                                ILoggerFactory loggerFactory)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
+            _emailSender          = emailSender;
             _externalCookieScheme = identityCookieOptions.Value.ExternalCookieAuthenticationScheme;
-            _emailSender = emailSender;
-            _smsSender = smsSender;
-            _logger = loggerFactory.CreateLogger<AccountController>();
+            _logger               = loggerFactory.CreateLogger<AccountController>();
+            _signInManager        = signInManager;
+            _smsSender            = smsSender;
+            _userManager          = userManager;
         }
 
         //
