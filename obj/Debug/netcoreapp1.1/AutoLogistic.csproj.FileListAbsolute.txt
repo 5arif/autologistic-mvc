@@ -1,0 +1,10 @@
+D:\Git\autologistic-mvc\AutoLogistic\bin\Debug\netcoreapp1.1\AutoLogistic.db
+D:\Git\autologistic-mvc\AutoLogistic\bin\Debug\netcoreapp1.1\AutoLogistic.deps.json
+D:\Git\autologistic-mvc\AutoLogistic\bin\Debug\netcoreapp1.1\AutoLogistic.runtimeconfig.json
+D:\Git\autologistic-mvc\AutoLogistic\bin\Debug\netcoreapp1.1\AutoLogistic.runtimeconfig.dev.json
+D:\Git\autologistic-mvc\AutoLogistic\bin\Debug\netcoreapp1.1\AutoLogistic.dll
+D:\Git\autologistic-mvc\AutoLogistic\bin\Debug\netcoreapp1.1\AutoLogistic.pdb
+D:\Git\autologistic-mvc\AutoLogistic\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+D:\Git\autologistic-mvc\AutoLogistic\obj\Debug\netcoreapp1.1\AutoLogistic.AssemblyInfo.cs
+D:\Git\autologistic-mvc\AutoLogistic\obj\Debug\netcoreapp1.1\AutoLogistic.dll
+D:\Git\autologistic-mvc\AutoLogistic\obj\Debug\netcoreapp1.1\AutoLogistic.pdb
