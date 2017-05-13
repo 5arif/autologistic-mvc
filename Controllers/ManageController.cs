@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -8,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using AutoLogistic.Models;
-using AutoLogistic.Models.ViewModels.ManageViewModels;
+using AutoLogistic.ViewModels.ManageViewModels;
 using AutoLogistic.Services;
 
 namespace AutoLogistic.Controllers
@@ -46,11 +44,11 @@ namespace AutoLogistic.Controllers
         {
             ViewData["StatusMessage"] =
                 message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
+                : message == ManageMessageId.SetPasswordSuccess  ? "Your password has been set."
                 : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
-                : message == ManageMessageId.Error ? "An error has occurred."
-                : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
-                : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
+                : message == ManageMessageId.Error               ? "An error has occurred."
+                : message == ManageMessageId.AddPhoneSuccess     ? "Your phone number was added."
+                : message == ManageMessageId.RemovePhoneSuccess  ? "Your phone number was removed."
                 : "";
 
             var user = await GetCurrentUserAsync();
