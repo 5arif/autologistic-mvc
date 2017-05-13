@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace AutoLogistic.Models.AccountViewModels
+namespace AutoLogistic.Models.ViewModels.AccountViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {

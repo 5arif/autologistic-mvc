@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace AutoLogistic.Models.ManageViewModels
+namespace AutoLogistic.Models.ViewModels.ManageViewModels
 {
     public class IndexViewModel
     {

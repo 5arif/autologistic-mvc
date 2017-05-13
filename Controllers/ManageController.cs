@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using AutoLogistic.Models;
-using AutoLogistic.Models.ManageViewModels;
+using AutoLogistic.Models.ViewModels.ManageViewModels;
 using AutoLogistic.Services;
 
 namespace AutoLogistic.Controllers

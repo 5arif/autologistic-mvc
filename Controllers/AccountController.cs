@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using AutoLogistic.Models;
-using AutoLogistic.Models.AccountViewModels;
+using AutoLogistic.Models.ViewModels.AccountViewModels;
 using AutoLogistic.Services;
 
 namespace AutoLogistic.Controllers

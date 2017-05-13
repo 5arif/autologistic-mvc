@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace AutoLogistic.Models.ManageViewModels
+namespace AutoLogistic.Models.ViewModels.ManageViewModels
 {
     public class ManageLoginsViewModel
     {

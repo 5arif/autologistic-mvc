@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AutoLogistic.Models.ManageViewModels
+namespace AutoLogistic.Models.ViewModels.ManageViewModels
 {
     public class RemoveLoginViewModel
     {
