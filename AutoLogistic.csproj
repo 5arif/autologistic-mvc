@@ -4,6 +4,9 @@
     <UserSecretsId>aspnet-AutoLogistic-27C4A6F7-A3C7-4A87-9FF2-6650EC0C47BD</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="wwwroot\images\Diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="AutoLogistic.db" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <ItemGroup>

@@ -33,5 +33,11 @@ namespace AutoLogistic.Controllers
         {
             return View();
         }
+
+        [Route("Help")]
+        public IActionResult Help()
+        {
+            return View();
+        }
     }
 }

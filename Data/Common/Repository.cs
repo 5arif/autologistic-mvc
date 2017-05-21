@@ -4,12 +4,14 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using AutoLogistic.Models.History;
 
 namespace AutoLogistic.Data.Common
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : RowHistory
     {
         private readonly DbSet<T> _dbSet;
+
         public readonly ApplicationDbContext Context;
         
         public Repository(ApplicationDbContext context)
@@ -20,20 +22,34 @@ namespace AutoLogistic.Data.Common
         
         public virtual void Create(T entity)
         {
+            entity.CreateDate = DateTime.Now;
+            entity.IsDelete = false;
+            entity.ModifyCount = 0;
+
             _dbSet.Attach(entity);
             Context.Entry(entity).State = EntityState.Added;
         }
 
         public virtual void Update(T entity)
         {
+            entity.ModifyDate = DateTime.Now;
+            entity.IsDelete = false;
+            entity.ModifyCount = entity.ModifyCount ++;
+
             _dbSet.Attach(entity);
             Context.Entry(entity).State = EntityState.Modified;
         }
 
         public virtual void Delete(T entity)
         {
+            //soft delete
+            entity.DeleteDate = DateTime.Now;
+            entity.ModifyDate = DateTime.Now;
+            entity.IsDelete = true; 
+            entity.ModifyCount = entity.ModifyCount++;
+
             _dbSet.Attach(entity);
-            Context.Entry(entity).State = EntityState.Deleted;
+            Context.Entry(entity).State = EntityState.Modified;
         }
 
         public IQueryable<T> GetQuery()

@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewData["Title"] = "Carrier";
+    Layout = "~/Views/Shared/_AppLayout.cshtml";
+}
+
+<div id="master-carrier">
+    <div class="panel box-shadow-none content-header bg-white">
+        <div class="panel-body">
+            <div class="col-md-12 text-primary">
+                <div class="col-md-6">
+                    <h3 class="animated fadeInLeft">
+                        <i class="fa fa-map fa-2x"></i>City List
+                    </h3>
+                </div><div class="col-md-6">
+                    <div class="pull-right">
+                        <button type="button" class="btn mtop20">
+                            <span class="fa fa-plus-circle text-primary"></span> New
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 padding-0">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body" style="min-height:470px">
+                    <div class="col-md-12 padding-0" style="padding-bottom:20px">
+                        <div class="col-lg-12 padding-0">
+                            <div class="input-group">
+                                <input class="form-control" aria-label="...">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Search
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="responsive-table">
+                        <table class="table table-striped table-bordered" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>City Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jakarta</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Cikarang</td>
+                                    <td>-</td>
+                                </tr>
+                                 <tr>
+                                    <td>Karawang</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Bali</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6" style="padding-top:20px">
+                        <span>showing 0-10 of 30 items</span>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="pagination pull-right">
+                            <li>
+                                <a href="#" aria-label="Previous"><span aria-hidden="true" class="fa fa-caret-left"></span></a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true" class="fa fa-caret-right"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
