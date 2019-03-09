@@ -6,7 +6,7 @@ made using dotnet core 1.1
 ![drawing](Screenshot/login.jpg?raw=true)
 ![drawing](Screenshot/dashboard.jpg?raw=true)
 ![drawing](Screenshot/receiving.jpg?raw=true)
-![drawing](Screenshot/06shiping.jpg?raw=true)
+![drawing](Screenshot/shiping.jpg?raw=true)
 
 </br>
 
